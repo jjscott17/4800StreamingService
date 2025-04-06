@@ -1,0 +1,64 @@
+.Header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* spreads items out */
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #341659;
+        padding: 1.25rem;
+        z-index: 100; /* Ensure the header stays on top */
+}
+      
+header {
+        display: flex;
+        align-items: center;
+        gap: 2rem; /* space between h1 and nav */
+        width: 100%;
+}
+      
+h1 {
+        margin: 0px;
+        font-size: 2rem;
+        color: #4bb0c4;
+}
+      
+nav {
+        display: flex;
+        gap: 1.5rem; /* adjust the space between links */
+}
+      
+a {
+        color: white;
+        text-decoration: none;
+        padding: 5px;
+        font-size: 1rem;
+        transition: all 0.3s ease-in-out;
+}
+      
+a:hover {
+        color: #ed0ff1; /* change color when hovered */
+        text-decoration: underline; /* underline effect */
+}
+      
+a:active {
+        color: #f695e7; /* change color when clicked */
+}
+      
+/* Search Bar Styles */
+.search-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+}
+      
+.search-input {
+        padding: 8px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 20px;
+        outline: none;
+        width: 400px; 
+}
