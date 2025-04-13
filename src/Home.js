@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Header from './Header';
 import './App.css';
 
@@ -108,12 +109,21 @@ const App = () => {
           <h2 className="genre-title">{genre}</h2>
           <div className="movie-row">
             {filteredMovies.filter(movie => movie.genre === genre).map(movie => (
-              <div key={movie.title} className="movie-card">
-                  <div className="movie-poster" style={{ backgroundImage: `url(${movie.poster})` }} />
+              <Link 
+                key={movie.title} 
+                to={`/watch/${encodeURIComponent(movie.title)}`} 
+                className="movie-card-link"
+              >
+                <div className="movie-card">
+                  <div 
+                    className="movie-poster" 
+                    style={{ backgroundImage: `url(${movie.poster})` }} 
+                  />
                   <div className="movie-content">
-                      <h3 className="movie-title">{movie.title}</h3>
+                    <h3 className="movie-title">{movie.title}</h3>
                   </div>
-              </div>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -122,4 +132,4 @@ const App = () => {
   );
 };
 
-export default App
+export default App;
