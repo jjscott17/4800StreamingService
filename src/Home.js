@@ -100,35 +100,40 @@ const App = () => {
   };
 
   return (
-    <div className="app-container">
-      <Header onSearchTermChange={handleSearchTermChange} />
-      <h1 className="browse">Browse Movies</h1>
-      
-      {filteredGenres.map(genre => (
-        <div key={genre} className="genre-section">
-          <h2 className="genre-title">{genre}</h2>
-          <div className="movie-row">
-            {filteredMovies.filter(movie => movie.genre === genre).map(movie => (
-              <Link 
-                key={movie.title} 
-                to={`/watch/${encodeURIComponent(movie.title)}`} 
-                className="movie-card-link"
-              >
-                <div className="movie-card">
-                  <div 
-                    className="movie-poster" 
-                    style={{ backgroundImage: `url(${movie.poster})` }} 
-                  />
-                  <div className="movie-content">
-                    <h3 className="movie-title">{movie.title}</h3>
+    <>
+      <div className='head'>
+        <Header onSearchTermChange={handleSearchTermChange} />
+      </div>
+      <div className="app-container">
+        
+        <h1 className="browse">Browse Movies</h1>
+        
+        {filteredGenres.map(genre => (
+          <div key={genre} className="genre-section">
+            <h2 className="genre-title">{genre}</h2>
+            <div className="movie-row">
+              {filteredMovies.filter(movie => movie.genre === genre).map(movie => (
+                <Link 
+                  key={movie.title} 
+                  to={`/watch/${encodeURIComponent(movie.title)}`} 
+                  className="movie-card-link"
+                >
+                  <div className="movie-card">
+                    <div 
+                      className="movie-poster" 
+                      style={{ backgroundImage: `url(${movie.poster})` }} 
+                    />
+                    <div className="movie-content">
+                      <h3 className="movie-title">{movie.title}</h3>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </>
   );
 };
 
