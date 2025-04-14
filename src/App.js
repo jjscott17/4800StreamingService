@@ -9,16 +9,18 @@ import Watch from './Watch';
 function App() {
   const [user, setUser] = useState(null);
 
+  
   const handleLogin = (userData) => {
     setUser(userData);
-  };
-
+  }; 
+  
+  
   return (
     <Router>
       <Routes>
         <Route
           path="/"
-          element={user ? <Dashboard user={user} /> : <Login onLogin={handleLogin} />}
+          element={user ? <Dashboard user={user} /> : <Login onLogin={handleLogin}  />}
         />
         <Route path="/login" element={<Login onLogin={handleLogin} />} />
         <Route path="/register" element={<Register />} />
