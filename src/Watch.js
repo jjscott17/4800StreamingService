@@ -41,6 +41,21 @@ const Watch = () => {
     }
   };
 
+  // Rewind 10 seconds
+  const handleRewind = () => {
+    if (!videoRef.current) return;
+    videoRef.current.currentTime = Math.max(videoRef.current.currentTime - 10, 0);
+  };
+
+  // Forward 10 seconds
+  const handleForward = () => {
+    if (!videoRef.current) return;
+    videoRef.current.currentTime = Math.min(
+      videoRef.current.currentTime + 10,
+      videoRef.current.duration
+    );
+  };
+
   // Update progress state as video plays
   const handleTimeUpdate = () => {
     if (!videoRef.current) return;
@@ -118,7 +133,7 @@ const Watch = () => {
   return (
     <div className="watch-page" ref={containerRef} onMouseMove={handleMouseMove}>
       <Header onSearchTermChange={() => {}} />
-			<h2 className="movie-title">{decodeURIComponent(movieTitle)}</h2>
+      <h2 className="movie-title">{decodeURIComponent(movieTitle)}</h2>
       <div className="video-container">
         <div className="video-wrapper">
           <video
@@ -135,6 +150,12 @@ const Watch = () => {
               <div className="controls-left">
                 <button onClick={togglePlay} className="control-button play-button">
                   {isPlaying ? '❚❚' : '►'}
+                </button>
+                <button onClick={handleRewind} className="control-button rewind-button">
+                  &#x23EA; 10s
+                </button>
+                <button onClick={handleForward} className="control-button forward-button">
+                  10s &#x23E9;
                 </button>
                 <div className="progress-container" onClick={handleProgressClick}>
                   <div className="progress-bar">

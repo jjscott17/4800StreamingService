@@ -1,28 +1,3 @@
-/* Global styles */
-body {
-  margin: 0;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  /* background: linear-gradient(-45deg, #333, #444, #222, #555); */
-  background: #1F1C2C;  
-  background-size: 400% 400%;
-  /* animation: gradientBG 15s ease infinite; */
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
-/* body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('https://images.squarespace-cdn.com/content/v1/5c75dfa97d0c9166551f52b1/1571759141591-I1RAI5I59E74DIYCLY57/Large_3909.jpg') center center / cover no-repeat;
-  filter: blur(1vw);
-  z-index: -1;
-} */
 /* Animated background gradient keyframes */
 @keyframes gradientBG {
   0% {
@@ -48,6 +23,7 @@ body {
   }
 }
 
+/* Login container */
 .auth-container {
   width: 320px;
   background: #4B0082;
@@ -58,6 +34,7 @@ body {
   animation: fadeInUp 0.8s ease-out;
 }
 
+/* Login form */
 .auth-form input {
   width: -webkit-fill-available;
   padding: 12px;
@@ -71,7 +48,7 @@ body {
 }
 
 .auth-form input:focus {
-  background: #666;
+  background: #bababa;
   outline: none;
 }
 

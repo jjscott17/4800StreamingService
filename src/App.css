@@ -14,13 +14,17 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #1F1C2C;
-  color: #fff;
   margin: 0;
-  scrollbar-gutter: stable;
-  padding: 0;
-}
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+  /* background: linear-gradient(-45deg, #333, #444, #222, #555); */
+   background: #1F1C2C;  
+  background-size: 400% 400%; 
+  /* animation: gradientBG 15s ease infinite; */
+  color: #fff;
+
+  min-height: 100vh;
+} 
+
 div#root {
   width: 100%;
   scrollbar-gutter: stable;
@@ -34,7 +38,7 @@ h1.browse {
 }
 
 .app-container {
-  padding: 0px;
+  padding-top: 75px;
 }
 
 .movie-row-wrapper {
@@ -139,6 +143,7 @@ h1.browse {
   font-size: calc(10px + 2vmin);
   color: white;
 }
+  
 
 .App-link {
   color: #61dafb;
@@ -153,3 +158,4 @@ h1.browse {
     transform: rotate(360deg);
   }
 }
+

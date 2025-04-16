@@ -19,8 +19,14 @@ function Header({ onSearchTermChange }) {
       <header>
         <h1>cosmic</h1>
         <nav>
-          <a href="/home">Home</a>
-          <a href="/dashboard">Settings</a>
+          <button className="homebtn" onClick={() => window.location.href = "/home"}>Home</button>
+          <div className='dropdown'>
+            <button class="dropbtn">Settings</button>
+            <div className='dropdown-content'>
+              <a href="/dashboard">Profile</a>
+              <a href="/login">Logout</a>
+            </div>
+          </div>
         </nav>
         <form className="search-form" onSubmit={handleSearchSubmit}>
           <input

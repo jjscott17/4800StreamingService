@@ -43,6 +43,11 @@
   padding: 10px;
   transition: opacity 0.3s;
 }
+.rewind-button,
+.forward-button {
+  /* Optionally, adjust margins or styling for the new buttons */
+  margin: 0 5px;
+}
 
 .control-button {
   background: none;
