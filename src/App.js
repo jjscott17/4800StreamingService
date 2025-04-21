@@ -32,7 +32,7 @@ function ProtectedRoute({ children }) {
     verifyUser();
   }, []);
 
-  // While verifying, you can show a loading indicator.
+  // While verifying, show a loading indicator.
   if (verified === null) {
     return <div>Loading...</div>;
   }
@@ -45,7 +45,7 @@ function App() {
   const [user, setUser] = useState(null);
 
   const handleLogin = (userData) => {
-    // You might still want to store user info after a successful login.
+    // Store user info after a successful login.
     setUser(userData);
   };
 
@@ -61,9 +61,9 @@ function App() {
         <Route
           path="/dashboard"
           element={
-            // Instead of checking for a user here, we use ProtectedRoute.
+            // Instead of checking for a user here, use ProtectedRoute.
             <ProtectedRoute>
-              {/* Optionally pass down the user if needed by Dashboard */}
+              {/* Pass down the user to Dashboard */}
               <Dashboard user={user} />
             </ProtectedRoute>
           }
