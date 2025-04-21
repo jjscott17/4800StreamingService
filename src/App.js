@@ -6,7 +6,7 @@ import Dashboard from './Dashboard';
 import Home from './Home';
 import Watch from './Watch';
 
-// This ProtectedRoute component performs verification using /api/verify.
+// Perform verification using /api/verify.
 function ProtectedRoute({ children }) {
   const [verified, setVerified] = useState(null);
 
