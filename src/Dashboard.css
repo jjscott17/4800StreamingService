@@ -1,0 +1,24 @@
+/* centers content of dashboard page */
+.dashboardPage {
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding-top: 80px; 
+        box-sizing: border-box;
+        background: #1F1C2C;
+}
+
+/* header at top of dashboard page */
+.dashboardHeader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #341659;
+        padding: 1.25rem;
+        z-index: 100;
+        text-align: left;
+}
