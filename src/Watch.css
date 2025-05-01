@@ -43,9 +43,9 @@
   padding: 10px;
   transition: opacity 0.3s;
 }
+
 .rewind-button,
 .forward-button {
-  /* Optionally, adjust margins or styling for the new buttons */
   margin: 0 5px;
 }
 
@@ -100,5 +100,3 @@
   width: 80px;
   margin: 0 10px;
 }
-
-/* Optionally, hide controls completely if not hovering (controlled via inline style and state) */
