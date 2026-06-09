@@ -8,8 +8,8 @@ If the user clicks on a movie on the home page, they will be taken to the watch 
 
 ## Links
 ### Link to the Streaming Service
-[Cosmic Streaming](https://4800.sdvxindex.com/) <br><br>
+[Cosmic Streaming](https://4800.sdvxindex.com/) (Website no longer running) <br><br>
 ### Link to the Scrum Logs
-[Scrum Logs](https://4800scrum.sdvxindex.com/) <br><br>
+[Scrum Logs](https://4800scrum.sdvxindex.com/) (Website no longer running) <br><br>
 ### Link to GitHub Repository
 [Repository](https://github.com/jjscott17/4800StreamingService)<br><br>
